@@ -1,0 +1,1575 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+
+\documentclass[a4paper,openany,oneside]{article}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Monday, May 01, 2023 21:09:10}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\renewcommand{\rmdefault}{ftm}
+\oddsidemargin -0,3cm \evensidemargin -0,3cm \textwidth 17cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 26cm
+\numberwithin{equation}{section}
+\parindent 1,2cm
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\sloppy
+\begin{document}
+$2\varepsilon_{ij}=u_{i,j}+u_{j,i}$
+
+$u_{i,j}=\frac{\partial u_{i}}{\partial x_{j}}$%
+
+\[
+2\ast\left(
+\begin{array}
+[c]{c}%
+\varepsilon_{11}\varepsilon_{12}\varepsilon_{13}\\
+\varepsilon_{21}\varepsilon_{22}\varepsilon_{23}\\
+\varepsilon_{31}\varepsilon_{32}\varepsilon_{33}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+\frac{\partial u}{\partial x}\frac{\partial u}{\partial y}\frac{\partial
+u}{\partial z}\\
+\frac{\partial v}{\partial x}\frac{\partial v}{\partial y}\frac{\partial
+v}{\partial z}\\
+\frac{\partial w}{\partial x}\frac{\partial w}{\partial y}\frac{\partial
+w}{\partial z}%
+\end{array}
+\right)  +\left(
+\begin{array}
+[c]{c}%
+\frac{\partial u}{\partial x}\frac{\partial v}{\partial x}\frac{\partial
+w}{\partial x}\\
+\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}\frac{\partial
+w}{\partial y}\\
+\frac{\partial u}{\partial z}\frac{\partial v}{\partial z}\frac{\partial
+w}{\partial z}%
+\end{array}
+\right)
+\]
+
+
+$2\varepsilon_{11}=2\frac{\partial u}{\partial x}$
+
+$2\varepsilon_{12}=\frac{\partial u}{\partial y}+\frac{\partial v}{\partial
+x}$
+
+$2\varepsilon_{13}=\frac{\partial u}{\partial z}+\frac{\partial w}{\partial
+x}$
+
+$2\varepsilon_{21}=\frac{\partial v}{\partial x}+\frac{\partial u}{\partial
+y}$
+
+$2\varepsilon_{22}=2\frac{\partial v}{\partial y}$
+
+$2\varepsilon_{23}=\frac{\partial v}{\partial z}+\frac{\partial w}{\partial
+y}$
+
+$2\varepsilon_{31}=\frac{\partial w}{\partial x}+\frac{\partial u}{\partial
+z}$
+
+$2\varepsilon_{32}=\frac{\partial w}{\partial y}+\frac{\partial v}{\partial
+z}$
+
+$2\varepsilon_{33}=2\frac{\partial w}{\partial z}$
+
+$\sigma_{ij}=\lambda\theta\delta_{ij}+2\mu\varepsilon_{ij}$%
+
+\[
+\delta_{ij}=\left\{
+\begin{array}
+[c]{c}%
+1,i=j\\
+0,i\neq j
+\end{array}
+\right.
+\]
+
+
+$\theta=\varepsilon_{11}+\varepsilon_{22}+\varepsilon_{33}=\frac{\partial
+u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}$
+
+$\sigma_{11}=\lambda(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial
+y}+\frac{\partial w}{\partial z})+2\mu\frac{\partial u}{\partial x}$
+
+$\sigma_{12}=\mu(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial
+x})=\sigma_{21}=\mu(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial
+y})$
+
+$\sigma_{13}=\mu(\frac{\partial u}{\partial z}+\frac{\partial w}{\partial
+x})=\sigma_{31}=\mu(\frac{\partial w}{\partial x}+\frac{\partial u}{\partial
+z})$
+
+$\sigma_{22}=\lambda(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial
+y}+\frac{\partial w}{\partial z})+2\mu\frac{\partial v}{\partial y}$
+
+$\sigma_{23}=\mu(\frac{\partial v}{\partial z}+\frac{\partial w}{\partial
+y})=\sigma_{3\uparrow}=\mu(\frac{\partial w}{\partial y}+\frac{\partial
+v}{\partial z})$
+
+$\sigma_{33}=\lambda(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial
+y}+\frac{\partial w}{\partial z})+2\mu\frac{\partial w}{\partial z}$
+
+$e=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial
+w}{\partial z},$ $\sigma_{x}=\sigma_{11},\sigma_{y}=\sigma_{22},\sigma
+_{z}=\sigma_{33},$ $\tau_{xy}=\sigma_{12}=\sigma_{21},\tau_{xz}=\sigma
+_{13}=\sigma_{31},\tau_{yz}=\sigma_{23}=\sigma_{32}$
+
+$\sigma_{x}=\lambda e+\mu\frac{\partial u}{\partial x}$
+
+$\sigma_{y}=\lambda e+\mu\frac{\partial v}{\partial y}$
+
+$\sigma_{z}=\lambda e+\mu\frac{\partial w}{\partial z}$
+
+$\tau_{xy}=\mu(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x})$
+
+$\tau_{xz}=\mu(\frac{\partial u}{\partial z}+\frac{\partial w}{\partial x})$
+
+$\tau_{yz}=\mu(\frac{\partial v}{\partial z}+\frac{\partial w}{\partial y})$
+
+\bigskip
+
+$\sigma_{ij,j}+F_{i}=\rho\frac{\partial^{2}u_{i}}{\partial t^{2}},$ $i=1,2,3$%
+
+\[
+\sigma_{ij,j}=\left(
+\begin{array}
+[c]{c}%
+\frac{\partial\sigma_{x}}{\partial x}\frac{\partial\tau_{xy}}{\partial y}%
+\frac{\partial\tau_{xz}}{\partial y}\\
+\frac{\partial\tau_{xy}}{\partial x}\frac{\partial\sigma_{y}}{\partial y}%
+\frac{\partial\tau_{yz}}{\partial z}\\
+\frac{\partial\tau_{xz}}{\partial x}\frac{\partial\tau_{yz}}{\partial y}%
+\frac{\partial\sigma z}{\partial z}%
+\end{array}
+\right)
+\]
+
+
+$\rho\frac{\partial^{2}\overline{u}_{i}}{\partial t^{2}}=-\rho\omega
+^{2}\overline{u}_{i}=\left\{
+\begin{array}
+[c]{c}%
+-\rho\omega^{2}\overline{u}\\
+-\rho\omega^{2}\overline{v}\\
+-\rho\omega^{2}\overline{w}%
+\end{array}
+\right.  $
+
+$\overline{F}_{i}=\{F_{1},F_{2},F_{3}\}=\{f_{x},f_{y},f_{z}\}$
+
+$\sigma_{x,x}=\lambda\frac{\partial e}{\partial x}+2\mu\frac{\partial^{2}%
+u}{\partial x^{2}}$
+
+$\sigma_{y,y}=\lambda\frac{\partial e}{\partial y}+2\mu\frac{\partial^{2}%
+v}{\partial y^{2}}$
+
+$\sigma_{z,z}=\lambda\frac{\partial e}{\partial z}+2\mu\frac{\partial^{2}%
+w}{\partial z^{2}}$
+
+$\tau_{xy,x}=\mu(\frac{\partial^{2}u}{\partial x\partial y}+\frac{\partial
+^{2}v}{\partial x^{2}})$
+
+$\tau_{xy,y}=\mu(\frac{\partial^{2}u}{\partial y^{2}}+\frac{\partial^{2}%
+v}{\partial x\partial y})$
+
+$\tau_{xz,z}=\mu(\frac{\partial^{2}u}{\partial z^{2}}+\frac{\partial^{2}%
+w}{\partial x\partial z})$
+
+$\tau_{xz,x}=\mu(\frac{\partial^{2}u}{\partial x\partial z}+\frac{\partial
+^{2}w}{\partial x^{2}})$
+
+$\tau_{yz,z}=\mu(\frac{\partial^{2}v}{\partial z^{2}}+\frac{\partial^{2}%
+w}{\partial y\partial z})$
+
+$\tau_{yz,y}=\mu(\frac{\partial^{2}v}{\partial y\partial z}+\frac{\partial
+^{2}w}{\partial y^{2}})$%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\frac{\partial\sigma_{x}}{\partial x}+\frac{\partial\tau_{xy}}{\partial
+y}+\frac{\partial\tau_{xz}}{\partial y}+f_{x}+\rho\omega^{2}u=0\\
+\frac{\partial\tau_{xy}}{\partial x}+\frac{\partial\sigma_{y}}{\partial
+y}+\frac{\partial\tau_{yz}}{\partial z}+f_{y}+\rho\omega^{2}v=0\\
+\frac{\partial\tau_{xz}}{\partial x}+\frac{\partial\tau_{yz}}{\partial
+y}+\frac{\partial\sigma z}{\partial z}+f_{z}+\rho\omega^{2}w=0
+\end{array}
+\right.
+\]
+%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\lambda\frac{\partial e}{\partial x}+2\mu\frac{\partial^{2}u}{\partial x^{2}%
+}+\mu(\frac{\partial^{2}u}{\partial y^{2}}+\frac{\partial^{2}v}{\partial
+x\partial y})+\mu(\frac{\partial^{2}u}{\partial z^{2}}+\frac{\partial^{2}%
+w}{\partial x\partial z})+f_{x}+\rho\omega^{2}u=0\\
+\mu(\frac{\partial^{2}u}{\partial x\partial y}+\frac{\partial^{2}v}{\partial
+x^{2}})+\lambda\frac{\partial e}{\partial y}+2\mu\frac{\partial^{2}v}{\partial
+y^{2}}+\mu(\frac{\partial^{2}v}{\partial z^{2}}+\frac{\partial^{2}w}{\partial
+y\partial z})+f_{y}+\rho\omega^{2}v=0\\
+\mu(\frac{\partial^{2}u}{\partial x\partial z}+\frac{\partial^{2}w}{\partial
+x^{2}})+\mu(\frac{\partial^{2}v}{\partial y\partial z}+\frac{\partial^{2}%
+w}{\partial y^{2}})+\lambda\frac{\partial e}{\partial z}+2\mu\frac
+{\partial^{2}w}{\partial z^{2}}+f_{z}+\rho\omega^{2}w=0
+\end{array}
+\right.
+\]
+%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\lambda\frac{\partial e}{\partial x}+(\mu\frac{\partial^{2}u}{\partial x^{2}%
+}+\mu\frac{\partial^{2}v}{\partial x\partial y}+\mu\frac{\partial^{2}%
+w}{\partial x\partial z})+(\mu\frac{\partial^{2}u}{\partial x^{2}}+\mu
+\frac{\partial^{2}u}{\partial y^{2}}+\mu\frac{\partial^{2}u}{\partial z^{2}%
+})+f_{x}+\rho\omega^{2}u=0\\
+\lambda\frac{\partial e}{\partial y}+(\mu\frac{\partial^{2}v}{\partial y^{2}%
+}+\mu\frac{\partial^{2}u}{\partial x\partial y}+\mu\frac{\partial^{2}%
+w}{\partial y\partial z})+(\mu\frac{\partial^{2}v}{\partial x^{2}}+\mu
+\frac{\partial^{2}v}{\partial y^{2}}+\mu\frac{\partial^{2}v}{\partial z^{2}%
+})+f_{y}+\rho\omega^{2}v=0\\
+\lambda\frac{\partial e}{\partial z}+(\mu\frac{\partial^{2}w}{\partial z^{2}%
+}+\mu\frac{\partial^{2}u}{\partial x\partial z}+\mu\frac{\partial^{2}%
+v}{\partial y\partial z})+(\mu\frac{\partial^{2}w}{\partial x^{2}}+\mu
+\frac{\partial^{2}w}{\partial y^{2}}+\mu\frac{\partial^{2}w}{\partial z^{2}%
+})+f_{z}+\rho\omega^{2}w=0
+\end{array}
+\right.
+\]
+%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+(\lambda+\mu)\frac{\partial e}{\partial x}+\mu\Delta u+f_{x}+\rho\omega
+^{2}u=0\\
+(\lambda+\mu)\frac{\partial e}{\partial y}+\mu\Delta v+f_{y}+\rho\omega
+^{2}v=0\\
+(\lambda+\mu)\frac{\partial e}{\partial z}+\mu\Delta w+f_{z}+\rho\omega^{2}w=0
+\end{array}
+\right.
+\]
+
+
+Предполагаем
+$f_{x}=f_{y}=f_{z}=0$
+(отсутствие
+объемных сил):%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+(\lambda+\mu)(u_{xx}^{\prime\prime}+v_{xy}^{\prime\prime}+w_{xz}^{\prime
+\prime})+\mu(u_{xx}^{\prime\prime}+u_{yy}^{\prime\prime}+u_{zz}^{\prime\prime
+})+\rho\omega^{2}u=0\\
+(\lambda+\mu)(u_{xy}^{\prime\prime}+v_{yy}^{\prime\prime}+w_{yz}^{\prime
+\prime})+\mu(v_{xx}^{\prime\prime}+v_{yy}^{\prime\prime}+v_{zz}^{\prime\prime
+})+\rho\omega^{2}v=0\\
+(\lambda+\mu)(u_{xz}^{\prime\prime}+v_{yz}^{\prime\prime}+w_{zz}^{\prime
+\prime})+\mu(w_{xx}^{\prime\prime}+w_{yy}^{\prime\prime}+w_{zz}^{\prime\prime
+})+\rho\omega^{2}w=0
+\end{array}
+\right.
+\]
+%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+U=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack u]\\
+V=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack v]\\
+W=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack w]
+\end{array}
+\right.
+\]
+
+
+Преобразование
+Фурье
+производим
+только по x и y,
+для z
+оставляем
+запись в производных:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+(\lambda+\mu)(-\alpha_{1}^{2}U-\alpha_{1}\alpha_{2}V-\alpha_{1}iW^{\prime
+})+\mu(-\alpha_{1}^{2}U-\alpha_{2}^{2}U+U^{\prime\prime})+\rho\omega^{2}U=0\\
+(\lambda+\mu)(-\alpha_{1}\alpha_{2}U-\alpha_{2}^{2}V-\alpha_{2}iW^{\prime
+})+\mu(-\alpha_{1}^{2}V-\alpha_{2}^{2}V+V^{\prime\prime})+\rho\omega^{2}V=0\\
+(\lambda+\mu)(-\alpha_{1}iU^{\prime}-\alpha_{2}iV^{\prime}+W^{\prime\prime
+})+\mu(-\alpha_{1}^{2}W-\alpha_{2}^{2}W+W^{\prime\prime})+\rho\omega^{2}W=0
+\end{array}
+\right.
+\]
+
+
+Начальное условие:%
+
+\[
+\bar{\tau}|_{z=0}\left\{
+\begin{array}
+[c]{c}%
+\bar{q}(x,y),(x,y)\in\Omega\\
+0,(x,y)\notin\Omega
+\end{array}
+\right.  \text{, }\tau_{i}=\sigma_{ij}n_{j}\text{, }i=1,2,3
+\]
+
+
+При $z=0$: $\bar{n}=(0,0,1)$ =%
+%TCIMACRO{\TEXTsymbol{>} }%
+%BeginExpansion
+$>$
+%EndExpansion
+$\tau=\{\tau_{xz},\tau_{yz},\sigma_{z}\}$:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\mu(u_{z}^{\prime}+w_{x}^{\prime})=q_{1}\\
+\mu(v_{z}^{\prime}+w_{y}^{\prime})=q_{2}\\
+\lambda(u_{x}^{\prime}+v_{y}^{\prime}+w_{z}^{\prime})+2\mu w_{z}^{\prime
+}=q_{3}%
+\end{array}
+\right.
+\]
+
+
+$%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack\bar{q}]=\bar{Q}=\{Q_{1},Q_{2},Q_{3}\}$%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\mu(U^{\prime}-\alpha_{1}iW)=Q_{1}\\
+\mu(V^{\prime}-\alpha_{2}iW)=Q_{2}\\
+\lambda(-\alpha_{1}iU-\alpha_{2}iV)+(\lambda+2\mu)W^{\prime}=Q_{3}%
+\end{array}
+\right.
+\]
+
+
+Введем
+замену для
+расщепления выражений:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+u=\frac{\partial\varphi}{\partial x}+\frac{\partial\psi}{\partial y}\\
+v=\frac{\partial\varphi}{\partial y}-\frac{\partial\psi}{\partial x}\\
+w=w
+\end{array}
+\right.
+\]
+
+
+Или в трансформантах:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+U=-\alpha_{1}i\Phi-\alpha_{2}i\Psi\\
+V=-\alpha_{2}i\Phi+\alpha_{1}i\Psi\\
+W=W,\Phi=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack\varphi],\Psi=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack\psi]
+\end{array}
+\right.
+\]
+
+
+Получим:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+(\lambda+\mu)(-\alpha_{1}^{2}(-\alpha_{1}i\Phi-\alpha_{2}i\Psi)-\alpha
+_{1}\alpha_{2}(-\alpha_{2}i\Phi+\alpha_{1}i\Psi)-\alpha_{1}iW^{\prime}%
+)+\mu(-\alpha_{1}^{2}(-\alpha_{1}i\Phi-\alpha_{2}i\Psi)-\alpha_{2}^{2}%
+(-\alpha_{1}i\Phi-\alpha_{2}i\Psi)+(-\alpha_{1}i\Phi-\alpha_{2}i\Psi
+)^{\prime\prime})+\rho\omega^{2}(-\alpha_{1}i\Phi-\alpha_{2}i\Psi)=0\\
+(\lambda+\mu)(-\alpha_{1}\alpha_{2}(-\alpha_{1}i\Phi-\alpha_{2}i\Psi
+)-\alpha_{2}^{2}(-\alpha_{2}i\Phi+\alpha_{1}i\Psi)-\alpha_{2}iW^{\prime}%
+)+\mu(-\alpha_{1}^{2}(-\alpha_{2}i\Phi+\alpha_{1}i\Psi)-\alpha_{2}^{2}%
+(-\alpha_{2}i\Phi+\alpha_{1}i\Psi)+(-\alpha_{2}i\Phi+\alpha_{1}i\Psi
+)^{\prime\prime})+\rho\omega^{2}(-\alpha_{2}i\Phi+\alpha_{1}i\Psi)=0\\
+(\lambda+\mu)(-\alpha_{1}i(-\alpha_{1}i\Phi-\alpha_{2}i\Psi)^{\prime}%
+-\alpha_{2}i(-\alpha_{2}i\Phi+\alpha_{1}i\Psi)^{\prime}+W^{\prime\prime}%
+)+\mu(-\alpha_{1}^{2}W-\alpha_{2}^{2}W+W^{\prime\prime})+\rho\omega^{2}W=0
+\end{array}
+\right.
+\]
+
+
+Преобразуем
+систему до
+тех пор, пока
+не получится следующее:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+-\alpha_{1}i\mu\Phi^{\prime\prime}-\alpha_{2}i\mu\Psi^{\prime\prime}%
+-(\lambda+\mu)\alpha_{1}iW^{\prime}+\alpha_{1}i[(\lambda+2\mu)(\alpha_{1}%
+^{2}+\alpha_{2}^{2})-\rho\omega^{2}]\Phi+\alpha_{2}i[\mu(\alpha_{1}^{2}%
++\alpha_{2}^{2})-\rho\omega^{2}]\Psi=0\\
+-\alpha_{2}i\mu\Phi^{\prime\prime}+\alpha_{1}i\mu\Psi^{\prime\prime}%
+-(\lambda+\mu)\alpha_{2}iW^{\prime}+\alpha_{2}i[(\lambda+2\mu)(\alpha_{1}%
+^{2}+\alpha_{2}^{2})-\rho\omega^{2}]\Phi+\alpha_{1}i[-\mu(\alpha_{1}%
+^{2}+\alpha_{2}^{2})+\rho\omega^{2}]\Psi=0\\
+(\lambda+2\mu)W^{\prime\prime}-(\lambda+\mu)(\alpha_{1}^{2}+\alpha_{2}%
+^{2})\Phi^{\prime}+[\rho\omega^{2}-\mu(\alpha_{1}^{2}+\alpha_{2}^{2})]W=0
+\end{array}
+\right.
+\]
+
+
+Введем замену:%
+
+\[
+\alpha^{2}=\alpha_{1}^{2}+\alpha_{2}^{2}%
+\]
+
+
+Получим:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+-\alpha_{1}i\mu\Phi^{\prime\prime}-\alpha_{2}i\mu\Psi^{\prime\prime}%
+-(\lambda+\mu)\alpha_{1}iW^{\prime}+\alpha_{1}i[(\lambda+2\mu)\alpha^{2}%
+-\rho\omega^{2}]\Phi+\alpha_{2}i[\mu\alpha^{2}-\rho\omega^{2}]\Psi=0\\
+-\alpha_{2}i\mu\Phi^{\prime\prime}+\alpha_{1}i\mu\Psi^{\prime\prime}%
+-(\lambda+\mu)\alpha_{2}iW^{\prime}+\alpha_{2}i[(\lambda+2\mu)\alpha^{2}%
+-\rho\omega^{2}]\Phi+\alpha_{1}i[-\mu\alpha^{2}+\rho\omega^{2}]\Psi=0\\
+(\lambda+2\mu)W^{\prime\prime}-(\lambda+\mu)\alpha^{2}\Phi^{\prime}%
++(\rho\omega^{2}-\mu\alpha^{2})W=0
+\end{array}
+\right.
+\]
+
+
+Домножим
+первое
+уравнение
+системы на $\alpha_{1}$,
+а второе - на
+$\alpha_{2}$, после чего
+сложим их:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+-\alpha^{2}i\mu\Phi^{\prime\prime}-\alpha^{2}i(\lambda+\mu)W^{\prime}%
++\alpha^{2}i[(\lambda+2\mu)\alpha^{2}-\rho\omega^{2}]\Phi=0\\
+(\lambda+\mu)W^{\prime\prime}-(\lambda+\mu)\alpha^{2}\Phi^{\prime}+(\rho
+\omega^{2}-\mu\alpha^{2})W=0
+\end{array}
+\right.
+\]
+
+
+Домножим
+первое
+уравнение
+системы на $\alpha_{2}$,
+а второе - на
+$(-\alpha_{1})$, после
+чего сложим их:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+-\alpha^{2}\mu\Psi^{\prime\prime}+\alpha^{2}i(\mu\alpha^{2}-\rho\omega
+^{2})\Psi=0\\
+(\lambda+\mu)W^{\prime\prime}-(\lambda+\mu)\alpha^{2}\Phi^{\prime}+(\rho
+\omega^{2}-\mu\alpha^{2})W=0
+\end{array}
+\right.
+\]
+
+
+Избавимся от
+коэффициента
+$(-\alpha^{2}i)$ b получим
+две
+независимые
+системы
+относительно
+$\Phi,W$:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\mu\Phi^{\prime\prime}+(\lambda+\mu)W^{\prime}+[\rho\omega^{2}-(\lambda
++2\mu)\alpha^{2}]\Phi=0\\
+(\lambda+\mu)W^{\prime\prime}-(\lambda+\mu)\alpha^{2}\Phi^{\prime}+(\rho
+\omega^{2}-\mu\alpha^{2})W=0
+\end{array}
+\right.
+\]
+
+
+и
+относительно
+$\Psi$:%
+
+\[
+\mu\Psi^{\prime\prime}+(\rho\omega^{2}-\mu\alpha^{2})\Psi=0
+\]
+
+
+Аналогично
+поступим и с
+граничными
+условиями.
+Полученные
+системы
+относительно
+$\Phi,W$:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+-\alpha^{2}\mu i(\Phi^{\prime}+W)=\alpha_{1}Q_{1}+\alpha_{2}Q_{2}\\
+-\alpha^{2}\lambda\Phi+(\lambda+2\mu)W^{\prime}=Q_{3}%
+\end{array}
+\right.
+\]
+
+
+и
+относительно
+$\Psi$:%
+
+\[
+-\alpha^{2}\mu\Psi^{\prime}+(\rho\omega^{2}-\mu\alpha^{2})\Psi=\alpha_{2}%
+Q_{1}-\alpha_{1}Q_{2}%
+\]
+
+
+Перепишем
+предыдущие
+задачи в
+матричном
+виде. Для
+этого введем
+два вектора:
+
+$\bar{Y}=\{\Phi,\Phi^{\prime},\Psi,\Psi^{\prime}\}^{T},$ $\bar{X}=\{\Psi
+,\Psi^{\prime}\}^{T}$
+
+Для
+сопоставления
+общего и
+частного
+случаев
+изменим вид системы:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+\frac{(\lambda+\mu)}{\mu}W^{\prime}+\frac{[(\lambda+2\mu)\alpha^{2}-\rho
+\omega^{2}]}{\mu}\Phi=\Phi^{\prime\prime}\\
+\frac{(\lambda+\mu)}{(\lambda+2\mu)}\alpha^{2}\Phi^{\prime}+\frac{(\mu
+\alpha^{2}-\rho\omega^{2})}{(\lambda+2\mu)}W=W^{\prime\prime}%
+\end{array}
+\right.
+\]
+%
+
+\[
+\frac{(\mu\alpha^{2}-\rho\omega^{2})}{\mu}\Psi=\Psi^{\prime\prime}%
+\]
+
+
+Подставим
+вектора в
+систему, а
+коэффициенты
+при
+трансформантах
+свернем в матрицы:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+A\bar{Y}=\frac{\partial\bar{Y}}{\partial z}\\
+T\bar{Y}|_{z=0}=\bar{P}%
+\end{array}
+\right.
+\begin{array}
+[c]{c}%
+\text{-общий
+случай
+относительно
+}\Phi\\
+\text{-частный
+случай
+относительно
+}\Phi\text{(граничные
+условия)}%
+\end{array}
+\]
+%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+B\bar{X}=\frac{\partial\bar{X}}{\partial z}\\
+(l\bar{X})|_{z=0}=\alpha_{2}Q_{1}-\alpha_{1}Q_{2}%
+\end{array}
+\right.
+\begin{array}
+[c]{c}%
+\text{-общий
+случай
+относительно
+}\Psi\\
+\text{-частный
+случай
+относительно
+}\Psi\text{(граничные
+условия)}%
+\end{array}
+\]
+%
+
+\[
+A=\left(
+\begin{array}
+[c]{c}%
+0~1~0~0\\
+\frac{\lbrack(\lambda+2\mu)\alpha^{2}-\rho\omega^{2}]}{\mu}~0~0~-\frac
+{(\lambda+\mu)}{\mu}\\
+0~0~0~1\\
+0~\frac{(\lambda+\mu)}{(\lambda+2\mu)}\alpha^{2}~\frac{(\mu\alpha^{2}%
+-\rho\omega^{2})}{(\lambda+2\mu)}~0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0~1~0~0\\
+a_{21}~0~0~a_{24}\\
+0~0~0~1\\
+0~a_{42}~a_{43}~0
+\end{array}
+\right)
+\]
+%
+
+\[
+B=\left(
+\begin{array}
+[c]{c}%
+0~1\\
+\frac{(\mu\alpha^{2}-\rho\omega^{2})}{(\lambda+2\mu)}~0
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+0~1\\
+b_{1}~0
+\end{array}
+\right)
+\]
+%
+
+\[
+T=\left(
+\begin{array}
+[c]{c}%
+-\lambda\alpha^{2}~0~0~\lambda+2\mu\\
+0~-i\mu\alpha^{2}~-i\mu\alpha^{2}~0
+\end{array}
+\right)
+\]
+%
+
+\[
+\bar{P}=\left(
+\begin{array}
+[c]{c}%
+Q_{3}\\
+\alpha_{1}Q_{1}+\alpha_{2}Q_{2}%
+\end{array}
+\right)
+\]
+%
+
+\[
+l=\left(
+\begin{array}
+[c]{c}%
+0\\
+-i\mu\alpha^{2}%
+\end{array}
+\right)
+\]
+
+
+В случае
+отсутствия
+кратных
+собственных
+значений,
+решение
+первой
+задачи $N=4$
+можно
+выписать в виде:%
+
+\[%
+\begin{array}
+[c]{c}%
+\bar{Y}=\sum\limits_{k=1}^{N}t_{k}\bar{m}_{k}e^{\gamma_{k}z}\\
+\gamma_{k}:\det(A-\gamma_{k}E)=0\\
+\bar{m}_{k}:(A-\gamma_{k}E)\bar{m}_{k}=0
+\end{array}
+,
+\]
+
+
+
+
+где N -
+размерность
+системы, $\gamma_{k}$ -
+собственные
+значения; $\bar{m}_{k}$ -
+соответствующие
+собственные
+вектора
+матрицы
+системы; $t_{k}$ -
+неизвестные
+константы,
+определяемые
+из $N$
+граничных
+условий; $E$ -
+единичная
+матрица
+размерности
+$N$
+
+Решение
+второй
+задачи $N=2~$:%
+
+\[%
+\begin{array}
+[c]{c}%
+\bar{X}=\sum\limits_{j=1}^{N}s_{j}\bar{n}_{j}e^{\delta_{j}z}\\
+\delta_{j}:\det(B-\delta_{j}E)=0\\
+\bar{n}_{j}:(B-\delta_{j}E)\bar{n}_{j}=0
+\end{array}
+,
+\]
+
+
+Найдем
+собственные значения:%
+
+\begin{align*}
+\det(A-\gamma_{k}E)  & =\left\vert
+\begin{array}
+[c]{c}%
+-\gamma~1~0~0\\
+a_{21}~-\gamma~0~a_{24}\\
+0~0~-\gamma~1\\
+0~a_{42}~a_{43}~-\gamma
+\end{array}
+\right\vert =-\gamma\left\vert
+\begin{array}
+[c]{c}%
+~-\gamma~0~a_{24}\\
+~0~-\gamma~1\\
+~a_{42}~a_{43}~-\gamma
+\end{array}
+\right\vert -1\left\vert
+\begin{array}
+[c]{c}%
+a_{21}~0~a_{24}\\
+0~-\gamma~1\\
+0~a_{43}~-\gamma
+\end{array}
+\right\vert =\\
+& =-\gamma(-\gamma)\left\vert
+\begin{array}
+[c]{c}%
+-\gamma~1\\
+a_{43}~-\gamma
+\end{array}
+\right\vert -\gamma a_{24}\left\vert
+\begin{array}
+[c]{c}%
+0~-\gamma\\
+a_{42}~a_{43}%
+\end{array}
+\right\vert -a_{21}\left\vert
+\begin{array}
+[c]{c}%
+-\gamma~1\\
+~a_{43}~-\gamma
+\end{array}
+\right\vert =\\
+& =\gamma^{2}(\gamma^{2}-a_{43})-\gamma^{2}a_{24}a_{42}-a_{21}\gamma
+^{2}+a_{21}a_{43}=\\
+& =\gamma^{4}-\gamma^{2}(a_{24}a_{42}+a_{43}+a_{21})+a_{21}a_{43}=0
+\end{align*}
+%
+
+\begin{align*}
+a_{24}a_{42}+a_{43}+a_{21}  & =-\frac{(\lambda+\mu)}{\mu}\frac{(\lambda+\mu
+)}{(\lambda+2\mu)}\alpha^{2}+\frac{(\mu\alpha^{2}-\rho\omega^{2})}%
+{(\lambda+2\mu)}+\frac{[(\lambda+2\mu)\alpha^{2}-\rho\omega^{2}]}{\mu}=\\
+& =\frac{2\mu\alpha^{2}(\lambda+2\mu)-\rho\omega^{2}(\lambda+2\mu)-\mu
+\rho\omega^{2}}{\mu(\lambda+2\mu)}%
+\end{align*}
+%
+
+\begin{align*}
+a_{21}a_{43}  & =\frac{[(\lambda+2\mu)\alpha^{2}-\rho\omega^{2}]}{\mu}%
+\frac{(\mu\alpha^{2}-\rho\omega^{2})}{(\lambda+2\mu)}=\\
+& =(\alpha^{2}-\frac{\rho\omega^{2}}{(\lambda+2\mu)})(\alpha^{2}-\frac
+{\rho\omega^{2}}{\mu})
+\end{align*}
+
+
+Используем
+следующую замену:%
+
+\[%
+\begin{array}
+[c]{c}%
+\varkappa_{1}^{2}=\frac{\rho\omega^{2}}{(\lambda+2\mu)}\\
+\varkappa_{2}^{2}=\frac{\rho\omega^{2}}{\mu}\\
+\sigma_{n}=\sqrt{\alpha^{2}-\varkappa_{n}^{2}}%
+\end{array}
+,~n=1,2
+\]
+
+
+Тогда наши
+уравнения
+примут вид:%
+
+\begin{align*}
+a_{24}a_{42}+a_{43}+a_{21}  & =\frac{2\mu\alpha^{2}(\lambda+2\mu)}{\mu
+(\lambda+2\mu)}+\frac{-\rho\omega^{2}(\lambda+2\mu)}{\mu(\lambda+2\mu)}%
++\frac{\mu\rho\omega^{2}}{\mu(\lambda+2\mu)}=\\
+& =2\alpha^{2}-\varkappa_{2}^{2}-\varkappa_{1}^{2}=(\alpha^{2}-\varkappa
+_{1}^{2})+(\alpha^{2}-\varkappa_{2}^{2})=\sigma_{1}^{2}+\sigma_{2}^{2}%
+\end{align*}
+%
+
+\[
+a_{21}a_{43}=(\alpha^{2}-\varkappa_{1}^{2})(\alpha^{2}-\varkappa_{2}%
+^{2})=\sigma_{1}^{2}\sigma_{2}^{2}%
+\]
+
+
+Тогда
+уравнение
+определителя
+принимает вид:%
+
+\[
+\gamma^{4}-\gamma^{2}(\sigma_{1}^{2}+\sigma_{2}^{2})+\sigma_{1}^{2}\sigma
+_{2}^{2}=0
+\]
+%
+
+\[
+\left.
+\begin{array}
+[c]{c}%
+\gamma_{1}^{2}=\frac{(\sigma_{1}^{2}+\sigma_{2}^{2})+(\sigma_{1}^{2}%
+-\sigma_{2}^{2})}{2}=\sigma_{1}^{2}\\
+\gamma_{2}^{2}=\frac{(\sigma_{1}^{2}+\sigma_{2}^{2})-(\sigma_{1}^{2}%
+-\sigma_{2}^{2})}{2}=\sigma_{2}^{2}%
+\end{array}
+\right\}  =>%
+\begin{array}
+[c]{c}%
+\gamma_{1}=\sigma_{1}\\
+\gamma_{2}=-\sigma_{1}\\
+\gamma_{3}=\sigma_{2}\\
+\gamma_{4}=-\sigma_{2}%
+\end{array}
+\]
+
+
+Найдем $\bar{m}_{k}$ :%
+
+\[
+\bar{m}_{k}=\{m_{1},m_{2},m_{3},m_{4}\}
+\]
+%
+
+\begin{align*}
+(A-\gamma_{k}E)\bar{m}_{k}  & =\left\{
+\begin{array}
+[c]{c}%
+-\gamma_{k}m_{1}+m_{2}~=0\\
+a_{21}m_{1}-\gamma_{k}m_{2}+a_{24}m_{4}=0\\
+-\gamma_{k}m_{3}+m_{4}=0\\
+a_{42}m_{2}+a_{43}m_{3}-\gamma_{k}m_{4}=0
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+m_{2}~=\gamma_{k}m_{1}\\
+a_{21}m_{1}-\gamma_{k}m_{2}+a_{24}m_{4}=0\\
+m_{4}=\gamma_{k}m_{3}\\
+a_{42}m_{2}+a_{43}m_{3}-\gamma_{k}m_{4}=0
+\end{array}
+\right.  =>\text{(выразим }%
+m_{2},m_{4}~\text{через}~m_{1},m_{3}%
+\text{)}=>\\
+& =>\left\{
+\begin{array}
+[c]{c}%
+-\gamma_{k}^{2}m_{1}+\gamma_{k}a_{24}m_{3}=a_{21}m_{1}\\
+\gamma_{k}a_{42}m_{1}-\gamma_{k}^{2}m_{3}=a_{43}m_{3}%
+\end{array}
+\right.  =\left\{
+\begin{array}
+[c]{c}%
+(a_{21}-\gamma_{k}^{2})m_{1}+\gamma_{k}a_{24}m_{3}=0\\
+\gamma_{k}a_{42}m_{1}+(a_{43}-\gamma_{k}^{2})m_{3}=0
+\end{array}
+\right.
+\end{align*}
+
+
+Т.к. $\det(A-\gamma_{k}E)=0$,
+решение
+можно найти,
+зафиксировав
+одно из неизвестных:%
+
+\[
+\left.
+\begin{array}
+[c]{c}%
+\gamma_{1}=\sigma_{1},~m_{1}=1=>(a_{21}-\sigma_{1}^{2})m_{1}+\sigma_{1}%
+a_{24}m_{3}=0~=>m_{3}=-\frac{(a_{21}-\sigma_{1}^{2})}{\sigma_{1}a_{24}}:\\
+m_{3}=\frac{(\frac{\alpha^{2}(\lambda+2\mu)-\rho\omega^{2}}{\mu}-(\alpha
+^{2}-\frac{\rho\omega^{2}}{(\lambda+2\mu)}))\mu}{(\lambda+\mu)\sigma_{1}%
+}=\frac{(\alpha^{2}-\frac{\rho\omega^{2}}{(\lambda+2\mu)})}{\sigma_{1}}%
+=\frac{\sigma_{1}^{2}}{\sigma_{1}}=\sigma_{1}\\
+m_{2}=\sigma_{1}m_{1}=>m_{2}=\sigma_{1}\\
+m_{4}=\sigma_{1}m_{3}=>m_{4}=\sigma_{1}^{2}%
+\end{array}
+\right\}  =>%
+\begin{array}
+[c]{c}%
+\bar{m}_{1}=\{1,\sigma_{1},\sigma_{1},\sigma_{1}^{2}\}
+\end{array}
+\]
+%
+
+\[
+\left.
+\begin{array}
+[c]{c}%
+\gamma_{2}=-\sigma_{1},~m_{1}=1=>m_{3}=\frac{(a_{21}-\sigma_{1}^{2})}%
+{\sigma_{1}a_{24}}:\\
+m_{3}=-\frac{(\frac{\alpha^{2}(\lambda+2\mu)-\rho\omega^{2}}{\mu}-(\alpha
+^{2}-\frac{\rho\omega^{2}}{(\lambda+2\mu)}))\mu}{(\lambda+\mu)\sigma_{1}%
+}=-\frac{(\alpha^{2}-\frac{\rho\omega^{2}}{(\lambda+2\mu)})}{\sigma_{1}%
+}=-\frac{\sigma_{1}^{2}}{\sigma_{1}}=-\sigma_{1}\\
+m_{2}=-\sigma_{1}m_{1}=>m_{2}=-\sigma_{1}\\
+m_{4}=-\sigma_{1}m_{3}=>m_{4}=\sigma_{1}^{2}%
+\end{array}
+\right\}  =>%
+\begin{array}
+[c]{c}%
+\bar{m}_{2}=\{1,-\sigma_{1},-\sigma_{1},\sigma_{1}^{2}\}
+\end{array}
+\]
+%
+
+\[
+\left.
+\begin{array}
+[c]{c}%
+\gamma_{3}=\sigma_{2},~m_{3}=\alpha^{2}=>m_{1}=-\frac{a_{24}\sigma_{2}%
+\alpha^{2}}{(a_{21}-\sigma_{2}^{2})}:\\
+m_{1}=\frac{\frac{(\lambda+\mu)}{\mu}\sigma_{2}\alpha^{2}}{(\frac{\alpha
+^{2}(\lambda+2\mu)-\rho\omega^{2}}{\mu}-(\alpha^{2}-\frac{\rho\omega^{2}}{\mu
+}))}=\frac{(\lambda+\mu)\sigma_{2}\alpha^{2}}{(\lambda+\mu)\alpha^{2}}%
+=\sigma_{2}\\
+m_{2}=\sigma_{2}m_{1}=>m_{2}=\sigma_{2}^{2}\\
+m_{4}=\sigma_{2}m_{3}=>m_{4}=\sigma_{2}\alpha^{2}%
+\end{array}
+\right\}  =>%
+\begin{array}
+[c]{c}%
+\bar{m}_{3}=\{\sigma_{2},\sigma_{2}^{2},\alpha^{2},\alpha^{2}\sigma_{2}\}
+\end{array}
+\]
+%
+
+\[
+\left.
+\begin{array}
+[c]{c}%
+\gamma_{3}=-\sigma_{2},~m_{3}=\alpha^{2}=>m_{1}=\frac{a_{24}\sigma_{2}%
+\alpha^{2}}{(a_{21}-\sigma_{2}^{2})}:\\
+m_{1}=-\frac{\frac{(\lambda+\mu)}{\mu}\sigma_{2}\alpha^{2}}{(\frac{\alpha
+^{2}(\lambda+2\mu)-\rho\omega^{2}}{\mu}-(\alpha^{2}-\frac{\rho\omega^{2}}{\mu
+}))}=-\frac{(\lambda+\mu)\sigma_{2}\alpha^{2}}{(\lambda+\mu)\alpha^{2}%
+}=-\sigma_{2}\\
+m_{2}=-\sigma_{2}m_{1}=>m_{2}=\sigma_{2}^{2}\\
+m_{4}=-\sigma_{2}m_{3}=>m_{4}=-\sigma_{2}\alpha^{2}%
+\end{array}
+\right\}  =>%
+\begin{array}
+[c]{c}%
+\bar{m}_{3}=\{-\sigma_{2},\sigma_{2}^{2},\alpha^{2},-\alpha^{2}\sigma_{2}\}
+\end{array}
+\]
+
+
+Аналогично
+поступим с $B$:%
+
+\begin{align*}
+\det(B-\delta_{j}E)  & =\left\vert
+\begin{array}
+[c]{c}%
+-\delta~1\\
+b_{1}~-\delta
+\end{array}
+\right\vert =\delta^{2}-b_{1}=0=>\delta_{1,2}=\pm\sqrt{b_{1}}\\
+b_{1}  & =\frac{(\mu\alpha^{2}-\rho\omega^{2})}{(\lambda+2\mu)}=\alpha
+^{2}-\frac{\rho\omega^{2}}{(\lambda+2\mu)}=\sigma_{2}^{2}=>\delta_{1,2}%
+=\pm\sqrt{\sigma_{2}^{2}}=\pm\sigma_{2}^{2}%
+\end{align*}
+
+
+Найдем $\bar{n}_{j}$:%
+
+\[
+\bar{n}_{j}=\{n_{1},n_{2}\}
+\]
+%
+
+\[
+(B-\delta_{j}E)\bar{n}_{j}=\left\{
+\begin{array}
+[c]{c}%
+-\delta_{j}n_{1}+n_{2}=0\\
+\sigma_{2}^{2}n_{1}-\delta_{j}n_{2}=0
+\end{array}
+\right.
+\]
+%
+
+\[
+\delta_{1}=\sigma_{2},~n_{1}=1=>n_{2}=\sigma_{2}n_{1}=>n_{2}=\sigma_{2}%
+=>\bar{n}_{1}=\left(
+\begin{array}
+[c]{c}%
+1\\
+\sigma_{2}%
+\end{array}
+\right)
+\]
+%
+
+\[
+\delta_{2}=-\sigma_{2},~n_{1}=1=>n_{2}=-\sigma_{2}n_{1}=>n_{2}=-\sigma
+_{2}=>\bar{n}_{2}=\left(
+\begin{array}
+[c]{c}%
+1\\
+-\sigma_{2}%
+\end{array}
+\right)
+\]
+
+
+Так как мы
+рассматриваем
+плоскость,
+будем
+придерживаться
+следующих условий:%
+
+\[
+z_{0}=0,~z->-\infty,~u(z)->0
+\]
+
+
+Для
+соблюдения
+этих условий
+необходимо,
+чиобы $\bar{Y}(\alpha,~z),~\bar{X}%
+(\alpha,~z)->0$. Однако в
+заданных
+функциях
+возникает
+проблема,
+связанная с
+поведением
+экспонент,
+поэтому мы
+рассмотри 2 случая:%
+
+\begin{align*}
+1)~|\alpha|  & >\varkappa_{k}=>\sigma_{k}=\sqrt{\alpha^{2}-\varkappa_{n}^{2}%
+}\text{-
+вещественная}%
+\\
+2)~|\alpha|  & <\varkappa_{k}=>\sigma_{k}\ =\sqrt{\alpha^{2}-\varkappa_{n}%
+^{2}}\text{- чисто
+мнимая}%
+\end{align*}
+
+
+В первом
+случае $e^{\sigma_{k}z}->0,e^{-\sigma
+_{k}z}->\infty$ , поэтому
+положим $t_{2}=t_{4}=s_{2}=0$. 
+
+Во втором
+случае
+анализ
+вклада
+показывает,
+что влияние
+экспоненты
+стремится к 0
+$[I]$ $=>$ константы
+могут быть
+ненулевыми,
+но не будут
+противоречить
+условию $u(z)->0.$
+
+В конечном
+итоге
+выходит, что
+количество
+констант
+больше 3,
+поэтому
+решение не
+будет
+единственным.
+В такой
+ситуации
+можно
+воспользоваться
+условиями
+излучения $[I],$
+согласно
+которым , в
+случае
+однородного
+пространства,
+часть
+констант
+являются
+эквивалентными.
+Если
+отталкиваться
+от принципа
+Зоммерфельда,
+то останутся
+только те
+составляющие,
+которые
+описывают
+распространение
+волн от
+источника в
+бесконечность.
+Таким
+образом наши
+функции
+примут вид:%
+
+\begin{align*}
+\bar{X}(\alpha,~z)  & =s_{1}\bar{n}_{1}e^{\sigma_{2}z}\\
+\bar{Y}(\alpha,~z)  & =t_{1}\bar{m}_{1}e^{\sigma_{1}z}+t_{3}\bar{m}%
+_{3}e^{\sigma_{2}z}%
+\end{align*}
+
+
+Осталось
+определить
+$t_{1},t_{3},s_{1}$ из
+граничных
+условий при $z=0.$
+В силу
+линейности
+задачи получим:%
+
+\begin{align*}
+T\bar{Y}  & =\left(
+\begin{array}
+[c]{c}%
+Q_{3}\\
+\alpha_{1}Q_{1}+\alpha_{1}Q_{2}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{c}%
+Q_{3}\\
+0
+\end{array}
+\right)  +\left(
+\begin{array}
+[c]{c}%
+0\\
+\alpha_{1}Q_{1}+\alpha_{1}Q_{2}%
+\end{array}
+\right)  =\\
+& =\left(
+\begin{array}
+[c]{c}%
+1\\
+0
+\end{array}
+\right)  Q_{3}+\left(
+\begin{array}
+[c]{c}%
+0\\
+1
+\end{array}
+\right)  (\alpha_{1}Q_{1}+\alpha_{1}Q_{2})=\left(
+\begin{array}
+[c]{c}%
+1\\
+0
+\end{array}
+\right)  P_{1}+\left(
+\begin{array}
+[c]{c}%
+0\\
+1
+\end{array}
+\right)  P_{2}%
+\end{align*}
+%
+
+\begin{align*}
+T\bar{Y}_{1}  & =\left(
+\begin{array}
+[c]{c}%
+1\\
+0
+\end{array}
+\right)  =\bar{e}_{1}\\
+T\bar{Y}_{2}  & =\left(
+\begin{array}
+[c]{c}%
+0\\
+1
+\end{array}
+\right)  =\bar{e}_{2}%
+\end{align*}
+%
+
+\[
+\left.
+\begin{array}
+[c]{c}%
+T\bar{Y}_{1}=\left(
+\begin{array}
+[c]{c}%
+1\\
+0
+\end{array}
+\right)  =\bar{e}_{1}\\
+T\bar{Y}_{2}=\left(
+\begin{array}
+[c]{c}%
+0\\
+1
+\end{array}
+\right)  =\bar{e}_{2}%
+\end{array}
+\right\}  =>T\bar{Y}_{n}|_{z=0}=\bar{e}_{n}%
+\]
+
+
+Отсюда получим:%
+
+\begin{align*}
+\bar{Y}  & =P_{1}\bar{Y}_{1}+P_{2}\bar{Y}_{2}\\
+\bar{X}  & =(\alpha_{2}Q_{1}-\alpha_{1}Q_{2})\bar{X}_{1}%
+\end{align*}
+
+
+Для
+обозначения
+компонент
+векторов $\bar{Y}_{n},$
+$\bar{X}_{1}$
+традиционно
+приняты обозначения:%
+
+\[
+\bar{Y}_{1}=\left(
+\begin{array}
+[c]{c}%
+P\\
+P^{\prime}\\
+R\\
+R^{\prime}%
+\end{array}
+\right)  ,\bar{Y}_{2}=\left(
+\begin{array}
+[c]{c}%
+M\\
+M^{\prime}\\
+S\\
+S^{\prime}%
+\end{array}
+\right)  ,\bar{X}_{1}=\left(
+\begin{array}
+[c]{c}%
+N\\
+N^{\prime}%
+\end{array}
+\right)
+\]
+
+
+Найдем вид
+функций P,R,M,S,N
+для
+однородного
+полупространства.
+Для этого
+выпишем
+уравнение $T\bar{Y},$
+подставляя
+$\bar{Y}_{n}$:%
+
+\[
+T\bar{Y}_{n}=(T\bar{m}_{1})t_{1}+(T\bar{m}_{3})t_{3}=\bar{e}_{n}%
+\]
+
+
+или в
+матричном виде:%
+
+\[
+B\bar{t}=\bar{e}_{n},~n=1,2
+\]
+%
+
+\[
+\]
+%
+
+\[
+B=\left(
+\begin{array}
+[c]{c}%
+2\mu(\alpha^{2}-0.5\varkappa_{2}^{2})~2\mu\alpha^{2}\sigma_{2}\\
+-2i\mu\alpha^{2}\sigma_{1}~-i\mu\alpha^{2}(\alpha^{2}+\sigma_{2}^{2})
+\end{array}
+\right)  ,\bar{t}=\left(
+\begin{array}
+[c]{c}%
+t_{1}\\
+t_{3}%
+\end{array}
+\right)
+\]
+
+
+По правилу Крамера:%
+
+\[
+t_{1}=\frac{\Delta_{1}}{\Delta},t_{3}=\frac{\Delta_{2}}{\Delta}%
+\]
+
+
+здесь:%
+
+\begin{align*}
+\Delta & =\det B\\
+\text{при }n  & =1,\text{ }\Delta_{1}=b_{22},\Delta
+_{2}=-b_{21},\\
+\text{при }n  & =2,\text{ }\Delta_{1}=-b_{12},\Delta
+_{2}=b_{11},
+\end{align*}
+
+
+Определитель
+матрицы
+имеет вид:%
+
+\[
+\Delta=4i\mu^{2}\alpha^{2}[-(\alpha^{2}-0.5\varkappa_{2}^{2})^{2}+\alpha
+^{2}\sigma_{1}\sigma_{2}]
+\]
+
+
+Таким
+образом
+получим
+следующие компоненты:%
+
+\begin{align*}
+P(\alpha,z)  & =\frac{2i\mu\alpha^{2}[-(\alpha^{2}-0.5\varkappa_{2}%
+^{2})e^{\sigma_{1}z}+\sigma_{1}\sigma_{2}e^{\sigma_{2}z}]}{\Delta}\\
+R(\alpha,z)  & =\frac{2i\mu\alpha^{2}\sigma_{1}[-(\alpha^{2}-0.5\varkappa
+_{2}^{2})e^{\sigma_{1}z}+\alpha^{2}e^{\sigma_{2}z}]}{\Delta}\\
+M(\alpha,z)  & =\frac{2\mu\sigma_{2}[-\alpha^{2}e^{\sigma_{1}z}+(\alpha
+^{2}-0.5\varkappa_{2}^{2})e^{\sigma_{2}z}]}{\Delta}\\
+S(\alpha,z)  & =\frac{2\mu\alpha^{2}[-\sigma_{1}\sigma_{2}e^{\sigma_{1}%
+z}+(\alpha^{2}-0.5\varkappa_{2}^{2})e^{\sigma_{2}z}]}{\Delta}%
+\end{align*}
+
+
+Аналогично
+для $\bar{X}_{1}$:%
+
+\[
+N(\alpha,z)=\frac{i}{\mu\alpha^{2}\sigma_{2}}e^{\sigma_{2}z}%
+\]
+
+
+Выразим
+искомые
+перемещения
+$\bar{U}$ через
+заданную
+нагрузку $\bar{Q}$. Имеем:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+U=-i\alpha_{1}(P_{1}P+P_{2}M)-i\alpha_{2}(\alpha_{2}Q_{1}-\alpha_{1}Q_{2})N\\
+V=-i\alpha_{2}(P_{1}P+P_{2}M)+i\alpha_{1}(\alpha_{2}Q_{1}-\alpha_{1}Q_{2})N\\
+W=P_{1}R+P_{2}S
+\end{array}
+\right.  .
+\]
+
+
+Или,
+группируя
+члены при $Q_{k}$ в
+матричном виде:%
+
+\[
+\bar{U}(\alpha_{1},\alpha_{2})=K(\alpha_{1},\alpha_{2},z)\bar{Q}(\alpha
+_{1},\alpha_{2})
+\]
+%
+
+\[
+K=\left(
+\begin{array}
+[c]{c}%
+-i(\alpha_{1}^{2}M+\alpha_{2}^{2}N)~-i\alpha_{1}\alpha_{2}(M+N)~-i\alpha
+_{1}P\\
+-i\alpha_{1}\alpha_{2}(M-N)~-i(\alpha_{2}^{2}M+\alpha_{1}^{2}N)~-i\alpha
+_{2}P\\
+\alpha_{1}S~\alpha_{2}S~R
+\end{array}
+\right)  .
+\]
+
+\end{document}
