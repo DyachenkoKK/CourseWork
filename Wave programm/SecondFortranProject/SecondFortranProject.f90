@@ -107,7 +107,6 @@
         complex*16 P, R, M, S, N
             sgm1 = makeSigma(kappa1, alpha)
             sgm2 = makeSigma(kappa2, alpha)
-            !delt = 2 * myu * (-(((alpha**2) - 0.5d0 * kappa2)**2) + (alpha**2) * sgm1 * sgm2)
             delt = 4*ci* (myu**2) * (-(((alpha**2) - 0.5d0 * kappa2)**2) + (alpha**2) * sgm1 * sgm2)
             P = makeP(alpha, sgm1, sgm2, kappa2, delt)
             R = makeR(alpha, sgm1, kappa2, delt)
