@@ -1,0 +1,27 @@
+&media
+c = 1d0,
+h = 1d0
+/
+&study
+mode = 'dec_x'
+wMin = 10d0, 
+wStep = 0d0, 
+wMax = 0d0,
+xMin = 5d0,
+xMax = 10d0,
+xStep = 0.5d0,
+zMin = 0d0,
+zMax = 0d0,
+zStep = 0d0,
+/
+&dinn5Settings
+t1 = 0d0, 
+t2 = 0d0, 
+t3 = 0d0, 
+t4 = 0d0, 
+tm = 2d-2, 
+tp = 0d0, 
+eps = 1d-6, 
+step = 1d-2, 
+IntLimit = 1d5
+/
