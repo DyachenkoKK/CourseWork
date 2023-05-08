@@ -1,0 +1,748 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+
+\documentclass[a4paper,openany,oneside]{article}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+%\usepackage{pscyr}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Sunday, May 07, 2023 23:38:32}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{proposition}{\indent Предложение}[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem{Characteristic}{\indent Свойство}[section]
+\newtheorem{corollary}{\indent Следствие}[section]
+\newtheorem{criterion}{\indent Критерий}[section]
+\newtheorem{example}{\indent Пример}[section]
+\newtheorem{remark}{\indent Замечание}[section]
+\newtheorem{algorithm}{\indent Алгоритм}
+\newtheorem{axiom}{\indent Аксиома}[section]
+\newtheorem{case}{\indent Случай}[section]
+\newtheorem{claim}{\indent Требование}[section]
+\newtheorem{conclusion}{\indent Заключение}[section]
+\newtheorem{condition}{\indent Условие}[section]
+\newtheorem{conjecture}{\indent Предположение}[section]
+\newtheorem{definition}{\indent Определение}[section]
+\newtheorem{exercise}{\indent Упражнение}[section]
+\newtheorem{problem}{\indent Задача}[section]
+\newtheorem{summary}{\indent Вывод}[section]
+\oddsidemargin 0cm \evensidemargin 0cm \textwidth 16,5cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 27cm
+\newenvironment{proof}{\par{Д о к а з а т е л ь с т в о.}}{\ $\Box$\vspace{6pt}}
+\pagestyle{myheadings}
+\numberwithin{equation}{section}
+\parindent 1,2cm
+\sloppy
+\begin{document}
+\section*{Введение}
+
+Вибрационная
+нагрузка,
+приложенная
+к
+поверхности
+упругого
+волновода,
+возбуждает в
+нем бегущие
+волны.
+Оценка
+характеристик
+этих волн
+используется
+в таких
+областях
+науки и
+техники, как
+сейсмология
+и
+сейсмостойкое
+строительство,
+виброзащита,
+а также в
+микроэлектронных
+устройствах
+на
+поверхностных
+акустических
+волнах и в
+системах
+прецизионного
+позиционирования.
+Волны,
+возбуждаемые
+в стальных,
+алюминиевых
+или
+композитных
+пластинах с
+помощью
+активных
+пьезосенсоров,
+выполненных
+в виде
+гибких и
+тонких
+накладок,
+распространяются
+на большие
+расстояния,
+взаимодействуя
+с любыми
+неоднородностями,
+что
+позволяет
+выявлять
+скрытые
+дефекты. В
+последнее
+время такая
+технология
+волнового
+контроля
+выделяется в
+самостоятельное
+научно-техническое
+направление
+--- мониторинг
+дефектов
+конструкций
+(Structural Health Monitoring (SHM)) [1].
+
+Для
+получения
+количественных
+характеристик
+возбуждаемых
+волн,
+используются
+различные
+подходы, от
+классического
+модального
+анализа до
+конечно-элементной
+аппроксимации
+(МКЭ).
+Промежуточное
+положение в
+этом ряду
+занимает
+полуаналитический
+интегральный
+подход,
+базирующийся
+на явном
+интегральном
+представлении
+вектора
+смещений
+волнового
+поля $u$,
+возбуждаемого
+поверхностной
+нагрузкой $q$,
+приложенной
+в некоторой
+области $\Omega$
+(рисунок 1),
+через
+Фурье-символ
+$K$ матрицы
+Грина
+рассматриваемой
+упругой
+слоистой структуры.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=3]{3d.eps}\caption{
+Геометрия
+задачи }%
+\end{figure}
+
+Цель данной
+работы:
+изучить
+моделирование
+процессов
+возбуждения
+и
+распространения
+волн в
+упругом
+волноводе на
+примере
+построения
+установившихся
+гармонических
+колебаний.
+Задачи:
+построить
+волновое
+поле,
+возбуждаемое
+точечным
+источником
+колебаний в
+упругом
+полупространстве
+методом
+конечных
+элементов
+при помощи
+программы COMSOL
+Multiphysics[2];
+построить
+волновое
+поле,
+используя
+полуаналитический
+интегральный
+подход,
+базирующийся
+на явном
+интегральном
+представлении
+вектора
+смещений
+волнового
+поля через
+Фурье символ
+$K$ матрицы
+Грина
+упругого
+полупространства
+с
+применением
+численного
+интегрирования
+средствами
+языка
+программирования
+Fortran и
+программы
+DINN5.$\bigskip$
+
+{\color{green} Данная работа может быть полезна для студентов и аспирантов начинающих работу с полуаналитическим методом }
+
+
+\section{Постановка
+задачи}
+
+Однородное
+изотропное
+упругое
+полупространство
+в декартовой
+системе
+координат $x,y$
+занимает
+объем $-\infty<$ $x,y<+\infty$. К
+его
+поверхности
+в области $\Omega$
+приложена
+нагрузка $\tau
+=q(x,y)e^{(-i\omega x)}$, а вне $\Omega$
+напряжения $\tau$
+отсутствуют.
+Колебания
+среды
+предполагаются
+гармоническими
+установившимися
+с круговой
+частотой $\omega$.
+На
+бесконечности
+перемещения
+и напряжения
+стремятся к
+нулю и
+выполняются
+условия
+излучения
+Зоммерфельда.
+Требуется
+определить
+волновое
+поле,
+возбуждаемое
+источником
+колебаний в
+упругой среде.
+
+Установившийся
+режим
+колебаний
+означает,
+что
+зависимость
+всех
+характеристик
+задачи
+(перемещения,
+напряжения и
+др.) от
+времени $t$
+описывается
+множителем
+$e^{(-i\omega x)}$. В силу
+линейности
+задачи
+данный
+множитель
+можно
+сократить и
+работать
+только с
+комплексными
+амплитудами
+соответствующих
+величин, не
+оговаривая
+этого особо.
+Например,
+$Re[u(x,y,z)e^{(-i\omega x)}]$ - вектор
+перемещений
+точек среды.
+Работать
+будем только
+с вектором
+$\mathbf{u}(x,y,z)=\{u,v,w\}$,
+называя его
+также
+вектором перемещений.
+
+Вектор
+перемещений
+характеризует
+отклонение
+каждой точки
+тела от
+начального
+положения,
+компоненты
+его $u,v,w$
+являются
+непрерывными
+функциями
+координат.
+Векторные
+величины
+здесь
+обозначаются
+чертой
+сверху;
+предполагается,
+что векторы
+являются векторами-столбцами.
+
+Механическое
+состояние
+упругого
+тела
+характеризуется
+компонентами
+тензоров
+деформаций
+$\varepsilon_{ij}$ и
+напряжений
+$\sigma_{ij}$, которые в
+линейной
+теории
+упругости
+связаны
+уравнениями
+движения
+\begin{equation}
+\sigma_{ij,j}+F_{i}=\rho\frac{\partial^{2}u_{i}}{\partial t^{2}}%
+,~i=1,2,3\dots, \label{MovementEquations}%
+\end{equation}
+соотношениями
+обобщенного
+закона Гука
+\begin{equation}
+\sigma_{ij}=c_{ij}^{mn}\varepsilon_{mn},~i,j=1,2,3\dots\label{HookEquations}%
+\end{equation}
+и
+геометрическими
+соотношениями
+Коши
+\begin{equation}
+2\varepsilon_{ij}=u_{i,j}+u_{j,i}. \label{KoshiRelations}%
+\end{equation}
+
+
+{\color{red} Здесь
+пишем все
+промежуточные
+шаги,
+получая в
+итоге...}
+
+В итоге из
+уравнений
+движения
+(\ref{MovementEquations})
+получаем
+уравнения
+Ляме
+\begin{equation}
+\left\{
+\begin{array}
+[c]{c}%
+(\lambda+\mu)\frac{\partial e}{\partial x}+\mu\Delta u+f_{x}+\rho\omega
+^{2}u=0\\
+(\lambda+\mu)\frac{\partial e}{\partial y}+\mu\Delta v+f_{y}+\rho\omega
+^{2}v=0\\
+(\lambda+\mu)\frac{\partial e}{\partial z}+\mu\Delta w+f_{z}+\rho\omega^{2}w=0
+\end{array}
+\right.  \label{LameEquations}%
+\end{equation}
+которые
+вместе с
+граничными
+условиями:
+\begin{equation}
+\bar{\tau}|_{z=0}=\left\{
+\begin{array}
+[c]{c}%
+\bar{q}(x,y),(x,y)\in\Omega\\
+0,(x,y)\notin\Omega
+\end{array}
+\right.  \label{boundaryCondition}%
+\end{equation}%
+\[
+\tau_{i}=\sigma_{ij}n_{j},i=1,2,3
+\]
+и условиями
+на
+бесконечности
+\begin{equation}
+\mathbf{u}\rightarrow0,\sqrt{x^{2}+y^{2}+z^{2}}\rightarrow\infty
+\label{infinityCondition}%
+\end{equation}
+составляют
+краевую
+задачу (\ref{MovementEquations}%
+-\ref{infinityCondition}), к
+решению
+которой
+сводится
+вопрос
+нахождения
+поля $\mathbf{u.}$
+
+\section{ Метод
+конечных
+элементов}
+
+В данном
+разделе мы
+построили
+волновое
+поле с
+помощью COMSOL
+
+Multiphysics. Эта
+программа
+имеет
+широкий
+функционал,
+множество
+модулей и
+предназначена
+для создания
+большого
+количества
+физических
+процессов,
+поэтому при
+работе с ней
+необходимо
+учитывать
+множество нюансов.
+
+Для
+рассмотрения
+части из них
+проходимся
+по всем
+этапам
+создания
+модели
+волнового
+поля. Первым
+шагом
+является
+выбор
+пространства,
+в котором
+пройдут все
+последующие
+вычисления.
+В нашем
+случае это
+двумерная
+плоскость (x, y),
+поэтому в
+начальном
+окне
+(Рисунок \ref{comsol1})
+выбираем
+кнопку \textquotedblleft2D
+\textquotedblright.\ 
+
+\begin{figure}[th]
+\centering
+\includegraphics[scale=1]{comsol1.jpg}\caption{Окно
+выбора
+мерности
+пространства
+}%
+\label{comsol1}%
+\end{figure}
+
+{\color{red} здесь
+вставляешь
+все что было
+в первой
+курсовой,
+только
+нагрузка в
+комсоле
+точечная и
+еще нужен
+скрин с
+графиком
+поля на
+поверхности}
+
+\section{Полуаналитический
+метод}
+
+{\color{red} Здесь надо
+расписать
+шаги от
+уравнений
+лямэ:
+преобразование
+Фурье и тд (не
+слишком
+подробно,
+примерно как
+в статье
+Шефов 1990 года)}%
+
+\[
+\Delta=4i\mu^{2}\alpha^{2}[-(\alpha^{2}-0.5\varkappa_{2}^{2})^{2}+\alpha
+^{2}\sigma_{1}\sigma_{2}]
+\]
+
+
+Таким
+образом
+получим
+следующие компоненты:%
+
+\begin{align*}
+P(\alpha,z)  &  =\frac{2i\mu\alpha^{2}[-(\alpha^{2}-0.5\varkappa_{2}%
+^{2})e^{\sigma_{1}z}+\sigma_{1}\sigma_{2}e^{\sigma_{2}z}]}{\Delta}\\
+R(\alpha,z)  &  =\frac{2i\mu\alpha^{2}\sigma_{1}[-(\alpha^{2}-0.5\varkappa
+_{2}^{2})e^{\sigma_{1}z}+\alpha^{2}e^{\sigma_{2}z}]}{\Delta}\\
+M(\alpha,z)  &  =\frac{2\mu\sigma_{2}[-\alpha^{2}e^{\sigma_{1}z}+(\alpha
+^{2}-0.5\varkappa_{2}^{2})e^{\sigma_{2}z}]}{\Delta}\\
+S(\alpha,z)  &  =\frac{2\mu\alpha^{2}[-\sigma_{1}\sigma_{2}e^{\sigma_{1}%
+z}+(\alpha^{2}-0.5\varkappa_{2}^{2})e^{\sigma_{2}z}]}{\Delta}%
+\end{align*}
+
+
+Аналогично
+для $\bar{X}_{1}$:%
+
+\[
+N(\alpha,z)=\frac{i}{\mu\alpha^{2}\sigma_{2}}e^{\sigma_{2}z}%
+\]
+
+
+Выразим
+искомые
+перемещения
+$\bar{U}$ через
+заданную
+нагрузку $\bar{Q}$. Имеем:%
+
+\[
+\left\{
+\begin{array}
+[c]{l}%
+U=-i\alpha_{1}(P_{1}P+P_{2}M)-i\alpha_{2}(\alpha_{2}Q_{1}-\alpha_{1}Q_{2})N\\
+V=-i\alpha_{2}(P_{1}P+P_{2}M)+i\alpha_{1}(\alpha_{2}Q_{1}-\alpha_{1}Q_{2})N\\
+W=P_{1}R+P_{2}S
+\end{array}
+\right.  .
+\]
+
+
+Или,
+группируя
+члены при $Q_{k}$ в
+матричном виде:%
+
+\[
+\mathbf{U}(\alpha_{1},\alpha_{2})=K(\alpha_{1},\alpha_{2},z)\mathbf{Q}%
+(\alpha_{1},\alpha_{2}),
+\]
+%
+
+\[
+K=\left(
+\begin{array}
+[c]{ccc}%
+-i(\alpha_{1}^{2}M+\alpha_{2}^{2}N) & -i\alpha_{1}\alpha_{2}(M+N) &
+-i\alpha_{1}P\\
+-i\alpha_{1}\alpha_{2}(M-N) & -i(\alpha_{2}^{2}M+\alpha_{1}^{2}N) &
+-i\alpha_{2}P\\
+\alpha_{1}S & \alpha_{2}S~ & R
+\end{array}
+\right)  .
+\]
+
+
+{\color{red}\bigskip\  Тут
+допиши еще
+обратное
+пребразование!}%
+
+
+Применим
+полуаналитический
+метод в тех
+же условиях,
+что и метод
+конечных
+элементов,
+затем
+сопоставим
+результаты.
+В плоском
+случае вид
+матрицы $K$
+значительно
+упрощается:
+\[
+K\left(  \alpha,z\right)  =\left(
+\begin{array}
+[c]{ll}%
+-i\alpha^{2}M & -i\alpha P\\
+\alpha S & R
+\end{array}
+\right)  .
+\]
+Преобразование
+Фурье
+сосредоточенной
+нагрузки $\mathbf{Q}%
+(x)=(0,1).$ Параметры
+для расчетов 
+
+\begin{center}%
+\begin{tabular}
+[c]{|l|l|l|l|}\hline
+$\mu$ & $\lambda$ & $\rho$ & $f$\\\hline
+22.6 ГПа & 18 ГПа & 2700
+кг/м$^{3}$ & 200 кГц\\\hline
+\end{tabular}
+\end{center}
+
+{\color{red} Тут допишешь про то как мы считали на фортране и вставишь графики поля на поверхности, где комсол с фортраном сопоставляем}
+
+\section{Заключение}%
+
+
+В рамках
+данной
+курсовой
+работы был
+рассмотрен
+метод
+моделирования
+конечных
+элементов
+программой COMSOL,
+а также
+метод
+полуаналитического
+преобразования
+Фурье с
+помощью
+языка
+программирования
+Fortran.
+
+Были
+выявлены
+недостатки и
+преимущества
+данных
+методов, что
+позволило
+нам сравнить
+оба подхода
+и понять, для
+ответа на
+какие
+вопросы
+каждый из
+методов
+более эффективен.
+
+\section*{Литература}%
+
+
+1. Mitra M., Gopalakrishnan S. Guided Wave Based Structural Health Monitoring:
+Review. Smart Materials and Structures, 2016, vol. 25, no. 5, pp. 1--27. DOI:
+10.1088/0964- 1726/25/5/053001
+
+2. Учебные
+руководства
+и пособия по
+использованию
+COMSOL Multiphysics // comsol.ru: [сайт] - URL:
+https://www.comsol.ru/documentation (дата
+обращения: 09.11.2022)
+
+
+\end{document}
