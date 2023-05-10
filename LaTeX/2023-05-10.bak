@@ -1,0 +1,1438 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%\usepackage[cp1251]{inputenc}
+%\usepackage{newthm}
+%\renewcommand{\baselinestretch}{1,25}
+%Чтобы точки стояли в содержании
+%Чтобы точки стояли в содержании
+
+\documentclass[a4paper,openany,oneside]{article}%
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtext}
+\usepackage[unicode]{hyperref}
+\usepackage{cmap}
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{ccaption}
+\usepackage{misccorr}
+\usepackage{indentfirst}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{soul}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{Created=Thursday, December 15, 2016 08:42:37}
+%TCIDATA{LastRevised=Wednesday, May 10, 2023 19:48:18}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{\indent Теорема}[section]
+\newtheorem{proposition}{\indent Предложение}[section]
+\newtheorem{lemma}{\indent Лемма}[section]
+\newtheorem{Characteristic}{\indent Свойство}[section]
+\newtheorem{corollary}{\indent Следствие}[section]
+\newtheorem{criterion}{\indent Критерий}[section]
+\newtheorem{example}{\indent Пример}[section]
+\newtheorem{remark}{\indent Замечание}[section]
+\newtheorem{algorithm}{\indent Алгоритм}
+\newtheorem{axiom}{\indent Аксиома}[section]
+\newtheorem{case}{\indent Случай}[section]
+\newtheorem{claim}{\indent Требование}[section]
+\newtheorem{conclusion}{\indent Заключение}[section]
+\newtheorem{condition}{\indent Условие}[section]
+\newtheorem{conjecture}{\indent Предположение}[section]
+\newtheorem{definition}{\indent Определение}[section]
+\newtheorem{exercise}{\indent Упражнение}[section]
+\newtheorem{problem}{\indent Задача}[section]
+\newtheorem{summary}{\indent Вывод}[section]
+\renewcommand{\rmdefault}{ftm}
+\oddsidemargin -0,3cm \evensidemargin -0,3cm \textwidth 17cm \topmargin -2cm
+\renewcommand{\baselinestretch}{1,2}
+\textheight 27cm
+\addto\captionsrussian{\def\refname{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}
+\parindent 1,2cm
+\pagestyle{myheadings}
+\renewcommand{\headrulewidth}{0pt}
+\sloppy
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\begin{document}
+
+\tableofcontents
+
+\newpage
+
+\section*{Введение}
+
+\addcontentsline{toc}{section}{Введение}
+
+Вибрационная
+нагрузка,
+приложенная
+к
+поверхности
+упругого
+волновода,
+возбуждает в
+нем бегущие
+волны.
+Оценка
+характеристик
+этих волн
+используется
+в таких
+областях
+науки и
+техники, как
+сейсмология
+и
+сейсмостойкое
+строительство,
+виброзащита,
+а также в
+микроэлектронных
+устройствах
+на
+поверхностных
+акустических
+волнах и в
+системах
+прецизионного
+позиционирования.
+Волны,
+возбуждаемые
+в стальных,
+алюминиевых
+или
+композитных
+пластинах с
+помощью
+активных
+пьезосенсоров,
+выполненных
+в виде
+гибких и
+тонких
+накладок,
+распространяются
+на большие
+расстояния,
+взаимодействуя
+с любыми
+неоднородностями,
+что
+позволяет
+выявлять
+скрытые
+дефекты. В
+последнее
+время такая
+технология
+волнового
+контроля
+выделяется в
+самостоятельное
+научно-техническое
+направление
+--- мониторинг
+дефектов
+конструкций
+(Structural Health Monitoring (SHM)) [1].
+
+Для
+получения
+количественных
+характеристик
+возбуждаемых
+волн,
+используются
+различные
+подходы, от
+классического
+модального
+анализа до
+конечно-элементной
+аппроксимации
+(МКЭ).
+Промежуточное
+положение в
+этом ряду
+занимает
+полуаналитический
+интегральный
+подход,
+базирующийся
+на явном
+интегральном
+представлении
+вектора
+смещений
+волнового
+поля $u$,
+возбуждаемого
+поверхностной
+нагрузкой $q$,
+приложенной
+в некоторой
+области $\Omega$
+(рисунок 1),
+через
+Фурье-символ
+$K$ матрицы
+Грина
+рассматриваемой
+упругой
+слоистой структуры.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[scale=3]{3d.eps}\caption{
+Геометрия
+задачи }%
+\end{figure}
+
+Цель данной
+работы:
+изучить
+моделирование
+процессов
+возбуждения
+и
+распространения
+волн в
+упругом
+волноводе на
+примере
+построения
+установившихся
+гармонических
+колебаний. 
+
+Задачи: 
+
+1. Построить
+волновое
+поле,
+возбуждаемое
+точечным
+источником
+колебаний в
+упругом
+полупространстве
+методом
+конечных
+элементов
+при помощи
+программы COMSOL Multiphysics[2];
+
+2. Построить
+волновое
+поле,
+используя
+полуаналитический
+интегральный
+подход,
+базирующийся
+на явном
+интегральном
+представлении
+вектора
+смещений
+волнового
+поля через
+Фурье символ
+$K$ матрицы
+Грина
+упругого
+полупространства
+с
+применением
+численного
+интегрирования
+средствами
+языка
+программирования
+Fortran и
+программы DINN5;
+
+3.
+Сопоставить
+полученные
+предыдущими
+шагами
+данные и, в
+случае
+эквивалентности
+результатов,
+убедиться в
+справедливости
+обоих
+методов
+нахождения
+волнового
+поля .
+
+\section{Постановка
+задачи}
+
+Однородное
+изотропное
+упругое
+полупространство
+в декартовой
+системе
+координат $x,y$
+занимает
+объем $-\infty<$ $x,y<+\infty,\quad-\infty
+<z\leq0$. К его
+поверхности
+в области $\Omega$
+приложена
+нагрузка $\tau
+=q(x,y)e^{-i\omega x}$, а вне $\Omega$
+напряжения $\tau$
+отсутствуют.
+Колебания
+среды
+предполагаются
+гармоническими
+установившимися
+с круговой
+частотой $\omega$.
+На
+бесконечности
+перемещения
+и напряжения
+стремятся к
+нулю и
+выполняются
+условия
+излучения
+Зоммерфельда.
+Требуется
+определить
+волновое
+поле,
+возбуждаемое
+источником
+колебаний в
+упругой среде.
+
+Установившийся
+режим
+колебаний
+означает,
+что
+зависимость
+всех
+характеристик
+задачи
+(перемещения,
+напряжения и
+др.) от
+времени $t$
+описывается
+множителем
+$e^{-i\omega x}$. В силу
+линейности
+задачи
+данный
+множитель
+можно
+сократить и
+работать
+только с
+комплексными
+амплитудами
+соответствующих
+величин, не
+оговаривая
+этого особо.
+Например,
+$Re[u(x,y)e^{-i\omega x}]$ - вектор
+перемещений
+точек среды.
+Работать
+будем только
+с вектором
+$u(x,y,z)=(u,v,w)$, называя
+его также
+вектором перемещений.
+
+Вектор
+перемещений
+характеризует
+отклонение
+каждой точки
+тела от
+начального
+положения,
+компоненты
+его $u,v,w$
+являются
+непрерывными
+функциями
+координат.
+Векторные
+величины
+здесь
+обозначаются
+чертой
+сверху;
+предполагается,
+что векторы
+являются векторами-столбцами.
+
+Механическое
+состояние
+упругого
+тела
+характеризуется
+компонентами
+тензоров
+деформаций
+$\varepsilon_{ij}$ и
+напряжений
+$\sigma_{i,j}$, которые в
+линейной
+теории
+упругости
+связаны
+уравнениями
+движения\begin{equation}
+\sigma_{ij,j}+F_{i}=\rho\frac{\partial^{2}u_{i}}{\partial t^{2}},~i=1,2,3...,
+\label{movEq}%
+\end{equation}
+
+
+соотношениями
+обобщенного
+закона Гука
+\begin{equation}
+\sigma_{i,j}=c_{ij}^{mn}\varepsilon_{mn},~i,j=1,2,3... \label{Hook}%
+\end{equation}
+
+
+и
+геометрическими
+соотношениями
+Коши:%
+
+\begin{equation}
+2\varepsilon_{ij}=u_{i,j}+u_{j,i}. \label{Koshi}%
+\end{equation}
+
+
+В случае
+однородного,
+изотропного
+полупространства,
+равенство (\ref{Hook}) упрощается:%
+
+\begin{equation}
+\sigma_{ij}=\lambda\theta\delta_{ij}+2\mu\varepsilon_{ij},\label{HookIso}%
+\end{equation}
+где\[
+\delta_{ij}=\left\{
+\begin{array}
+[c]{c}%
+1,i=j\\
+0,i\neq j
+\end{array}
+\right.  ;\quad\theta=\varepsilon_{11}+\varepsilon_{22}+\varepsilon_{33},
+\]
+а при помощи
+равенств (\ref{Koshi}),
+(\ref{HookIso})
+уравнения
+движения (\ref{movEq})
+преобразуются
+в систему
+уравнений
+Ляме\begin{equation}
+\left\{
+\begin{array}
+[c]{c}%
+(\lambda+\mu)\frac{\partial e}{\partial x}+\mu\Delta u+f_{x}+\rho\omega
+^{2}u=0\\
+(\lambda+\mu)\frac{\partial e}{\partial y}+\mu\Delta v+f_{y}+\rho\omega
+^{2}v=0\\
+(\lambda+\mu)\frac{\partial e}{\partial z}+\mu\Delta w+f_{z}+\rho\omega^{2}w=0
+\end{array}
+\right.  \label{LameEq}%
+\end{equation}
+где
+\[
+e=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial
+w}{\partial z}.
+\]
+
+
+Условие
+приложения
+нагрузки $\tau
+=q(x,y)e^{(-i\omega x)}$ в
+области $\Omega$
+преобразуется
+\begin{equation}
+\bar{\tau}|_{z=0}=\left\{
+\begin{array}
+[c]{c}%
+\bar{q}(x,y),(x,y)\in\Omega\\
+0,(x,y)\notin\Omega
+\end{array}
+\right.  \text{, } \label{boundCond}%
+\end{equation}%
+\[
+\tau_{i}=\sigma_{ij}n_{j},i=1,2,3
+\]
+и вместе с
+условиями на бесконечности:%
+
+\begin{align}
+u  & \rightarrow0,~\sqrt{x^{2}+y^{2}+z^{2}}\rightarrow\infty\label{boundCond2}%
+\\
+& (У с л о в и я ~и з
+л у ч е н и я )
+\end{align}
+составляет
+граничные условия.
+
+Таким
+образом
+получается
+краевая
+задача (\ref{LameEq})-(\ref{boundCond2}),
+к решению
+которой
+сводится
+вопрос
+нахождения
+поля $u$\cite{Shefs}.
+
+\section{ Метод
+конечных
+элементов}
+
+Для
+построения
+численного
+примера
+воспользуемся
+возможностью
+расщепления
+задачи (\ref{LameEq})-(\ref{boundCond2})
+на две
+независимые:
+плоскую и
+антиплоскую.
+Рассмотрим
+первый
+случай,
+когда
+распространение
+волн и
+смещение
+частиц
+происходят в
+одной
+плоскости $Oxy.$ В
+данном
+разделе
+поэтапно
+построим
+плоское
+волновое
+поле $\mathbf{u}(x,y)=(u,v)$ с
+помощью
+программы COMSOL
+Multiphisics. Эта
+программа
+имеет
+широкий
+функционал,
+множество
+модулей и
+предназначена
+для
+моделирования
+большого
+количества
+физических
+процессов,
+при этом
+есть
+возможность
+учета их
+взаимного влияния.
+
+Первым шагом
+будет выбор
+пространства,
+в котором
+будут
+проходить
+все
+последующие
+вычисления.
+В нашем
+случае это
+будет
+двумерная
+плоскость $\{X,Y\}$
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/1.PNG}\caption{Окно
+выбора
+мерности
+пространства
+}%
+\label{comsol1}%
+\end{figure}
+
+Далее COMSOL
+предоставляет
+нам выбор
+процесса,
+который мы
+предпочтем
+рассматривать.
+Из имеющихся
+вариантов
+используем
+\textquotedblleft механики
+твердых
+тел\textquotedblright\ (Solid Mechanics),
+так как
+построенный
+в итоге
+волновод
+должен
+являться упругим.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/2.PNG}\caption{Окно
+выбора
+физических
+процессов }%
+\label{comsol2}%
+\end{figure}
+
+Следующее
+окно, с
+которым мы
+сталкиваемся,
+предлагает
+нам выбрать
+дополнительные
+условия,
+которые мы
+будем
+накладывать
+на наше
+пространство.
+Выберем
+"частотное
+поле" (Frequency Domain),
+потому что
+этот модуль
+будет
+работать с
+поступающим
+напряжением,
+как с
+установившимися
+гармоническими
+колебаниями.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/3.PNG}\caption{Окно
+выбора
+дополнительных
+условий }%
+\label{comsol3}%
+\end{figure}\bigskip
+
+После
+проделанных
+ранее
+действий
+перед нами
+открывается
+рабочее
+пространство
+COMSOL, в котором
+можно
+задавать
+нужные нам
+формы,
+материалы,
+свойства,
+значения и т.д.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/4.PNG}\caption{Окно
+добавления
+физических
+процессов }%
+\label{comsol4}%
+\end{figure}
+
+Для
+добавления
+желаемого
+объекта на
+область
+отображений
+на верхней
+панели
+секцию \textquotedblleft%
+геометрия\textquotedblright%
+\ (Geometry) и нажмем на
+интересующую
+нас фигуру,
+например, прямоугольник.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[scale=1]{Comsol_images/5.PNG}\caption{Окно
+редактирования
+проекта }%
+\label{comsol5}%
+\end{figure}
+
+У созданной
+области не
+будет
+заданных
+заранее
+характеристик,
+поэтому
+зададим их
+самостоятельно.
+В будущем
+может
+возникнуть
+потребность
+в изменении
+конкретных
+параметров,
+поэтому для
+удобства
+заранее
+создадим
+константы,
+на которые
+будем
+ссылаться в
+других
+частях
+программы.
+Данный
+функционал
+предусмотрен
+в секции \textquotedblleft%
+параметры\textquotedblright%
+\ (Parameters). В
+появившихся
+полях \textquotedblleft%
+имя\textquotedblright\ (Name) и \textquotedblleft%
+выражение\textquotedblright%
+\ (Expression) зададим,
+соответственно,
+имена
+переменных и
+их значения.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/6.PNG}\caption{Окно
+управления
+константами
+}%
+\label{comsol6}%
+\end{figure}Передадим
+созданные
+переменные
+соответствующим
+полям и
+нажмем на
+кнопку \textquotedblleft%
+создать все
+объекты\textquotedblright\ (Build
+All Objects).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/7.PNG}\caption{Окно
+графического
+отображения
+}%
+\label{comsol7}%
+\end{figure}
+
+Далее нам
+понадобится
+область, на
+которую
+будет
+поступать
+нагрузка.
+Для этого,
+используя
+предыдущие
+шаги,
+создадим \textquotedblleft%
+точку\textquotedblright\ (Point),
+которая
+будет
+находиться,
+например, в
+центре
+верхней
+поверхности
+имеющегося прямоугольника.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/8.PNG}\caption{Добавление
+на график
+точки }%
+\label{comsol8}%
+\end{figure}Для
+создания
+нагрузки на
+пространство
+в разделе Solid Mechanics
+добавим \textquotedblleft%
+точечную
+нагрузку\textquotedblright%
+\ (Point Load) и нажмем
+на
+нагружаемую
+область,
+чтобы
+выбрать ее.
+Силу, с
+которой
+будут
+поступать
+колебания,
+зададим в
+разделе \textquotedblleft%
+сила\textquotedblright\ (Force).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/9.PNG}\caption{Добавление
+нагрузки на
+точку }%
+\label{comsol9}%
+\end{figure}
+
+Теперь,
+когда мы
+создали
+объект, ему
+нужно задать
+материал.
+Для этого
+выбираем
+секцию \textquotedblleft%
+материалы\textquotedblright%
+\ (Materials) на верхней
+панели и
+жмем \textquotedblleft%
+добавить
+материал\textquotedblright%
+\ (Add Material).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/10.PNG}\caption{Окно
+добавления
+материала }%
+\label{comsol10}%
+\end{figure}
+
+В
+открывшейся
+библиотеке
+материалов
+выбираем
+подходящий.
+В нашем
+случае
+полупространство
+является
+упругим,
+поэтому
+соответствующим
+материалом
+будет \textquotedblleft%
+алюминий\textquotedblright\ (Aluminum).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[scale=0.6]{Comsol_images/11.PNG}\caption{Библиотека
+материалов }%
+\label{comsol11}%
+\end{figure}
+
+Следующим
+шагом нужно
+сделать наш
+прямоугольник
+полупространством,
+чтобы при
+распространении
+волны
+уходили на
+бесконечность
+и не
+отражались
+от
+поверхностей.
+Для этого
+выберем в
+секции \textquotedblleft%
+определения\textquotedblright%
+\ (Definitions)
+инструмент
+\textquotedblleft идеально
+подобранные
+слои\textquotedblright\ (Perfectly Matched Layers
+(PML)), который
+будет
+поглощать
+поступающие волны.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[scale=1]{Comsol_images/12.PNG}\caption{Добавление
+PML }%
+\label{comsol12}%
+\end{figure}
+
+Для
+размещения PML
+необходимо
+создать слои
+на краях
+объекта. Для
+этого
+выберем наш
+прямоугольник
+в области \textquotedblleft%
+геометрия\textquotedblright%
+\  и в блоке \textquotedblleft%
+слои\textquotedblright\ (Layers)
+зададим
+нужную
+позицию и
+толщину слоев.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/13.PNG}\caption{Добавление
+слоев на
+график }%
+\label{comsol13}%
+\end{figure}
+
+После этого
+возвращаемся
+к блоку PML и
+выбираем те
+слои,
+которые
+хотим
+сделать поглощающими.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/14.PNG}\caption{Передача
+PML выделенным
+слоям }%
+\label{comsol14}%
+\end{figure}Одним из
+заключительных
+действий
+станет
+добавление
+на объект
+сетки. Для
+этого в
+разделе \textquotedblleft%
+сетка\textquotedblright\ (Mesh)
+выбираем,
+насколько
+маленькими
+будут
+фрагменты,
+на которые COMSOL
+разобьет
+нашу
+область. Чем
+меньше один
+фрагмент,
+там плотнее
+будет
+расположена
+сетка, и тем
+точнее будут
+полученные
+вычисления.
+Однако
+увеличение
+точности
+повлечет за
+собой
+увеличение
+вычислительной
+сложности, а
+значит
+остается
+выбрать
+наиболее
+подходящий
+вариант.
+Выбираем \textquotedblleft%
+очень
+гладко\textquotedblright\ (Extra fine)
+и нажимаем Build All.
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/15.PNG}\caption{Наложение
+сетки }%
+\label{comsol15}%
+\end{figure}
+
+Теперь,
+когда у нас
+заданы
+практически
+все условия,
+осталось
+зайти в
+раздел \textquotedblleft%
+изучение\textquotedblright%
+\ (Study), (Step 1: Frequency Domain),
+задать
+частоту
+колебаний и
+нажать \textquotedblleft%
+вычислить\textquotedblright%
+\ (Compute).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/16.PNG}\caption{Вычисленный
+график с
+деформацией
+}%
+\label{comsol16}%
+\end{figure}
+
+Полученный
+результат
+показывает,
+что
+нагрузка,
+приложенная
+к
+алюминиевому
+полупространству,
+была слишком
+велика,
+отчего
+материал
+сильно
+деформировался.
+В нашем
+случае этот
+итог не
+несет
+никакой
+информативности,
+так что в
+разделе \textquotedblleft%
+результат\textquotedblright%
+\ (Result), в блоке \textquotedblleft%
+стресс\textquotedblright\ (Stress)
+удаляем
+пункт \textquotedblleft%
+деформация\textquotedblright%
+\ (Deformation).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/17.PNG}\caption{Вычисленный
+график без
+деформации }%
+\label{comsol17}%
+\end{figure}
+
+Чтобы на
+графике было
+видно
+распространение
+волн, а не
+распределение
+нагрузки,
+поменяем в
+настройках
+поверхности
+\textquotedblleft%
+выражение\textquotedblright%
+\ (Expression) на пакет
+\textquotedblleft solid.disp\textquotedblright.
+Нажимаем \textquotedblleft%
+построить
+график\textquotedblright\ (Plot).
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/18.PNG}\caption{Другой
+вид графика
+без
+деформаций }%
+\label{comsol18}%
+\end{figure}
+
+Если
+полученной
+модели
+недостаточно,
+можно
+добавить и
+другие
+графики с
+различными
+параметрами.
+Например,
+добавим
+двумерный
+график,
+отображающий
+зависимость
+величины
+нагрузки от
+расположения
+на объекте. В
+качестве
+функции,
+описывающей
+эту
+зависимость,
+возьмем
+компоненту
+вектора
+перемещений u.
+
+\newpage\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/19.PNG}\caption{Одномерный
+график
+нагрузки на
+область по
+компоненте u }%
+\label{comsol19}%
+\end{figure}
+
+Или же, для
+большей
+наглядности,
+используем
+компоненту v.
+
+\newpage\begin{figure}[ptb]
+\centering
+\includegraphics[width=\textwidth]{Comsol_images/20.PNG}\caption{Одномерный
+график
+нагрузки на
+область по
+компоненте v }%
+\label{comsol20}%
+\end{figure}
+
+Теперь,
+когда мы на
+примере
+рассмотрели
+принцип
+работы МКЭ,
+обратимся к
+методу
+полуаналитического
+решения.
+
+\section{Полуаналитический
+метод}
+
+Полуаналитический
+метод
+строится на
+ресщеплении
+краевой
+задачи (\ref{LameEq})-(\ref{boundCond2})
+на две
+независимые:
+плоскую и
+антиплоску
+при помощи
+преобразования
+Фурье и
+замены
+переменных,
+также
+используются
+свойства
+преобразования
+упрощать
+операции
+дифференцирования
+и свертки.
+
+Предполагаем
+$f_{x}=f_{y}=f_{z}=0$
+(отсутствие
+объемных
+сил). Введем обозначения:%
+
+\[
+\left\{
+\begin{array}
+[c]{c}%
+U=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack u]\\
+V=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack v]\\
+W=%
+%TCIMACRO{\tciFourier}%
+%BeginExpansion
+\mathcal{F}%
+%EndExpansion
+\lbrack w]
+\end{array}
+\right.
+\]
+
+
+Определитель
+матрицы $B$
+имеет вид:%
+
+\[
+\Delta=4i\mu^{2}\alpha^{2}[-(\alpha^{2}-0.5\varkappa_{2}^{2})^{2}+\alpha
+^{2}\sigma_{1}\sigma_{2}]
+\]
+
+
+Обозначим
+решения
+следующим образом:%
+
+\begin{align*}
+P(\alpha,z)  &  =\frac{2i\mu\alpha^{2}[-(\alpha^{2}-0.5\varkappa_{2}%
+^{2})e^{\sigma_{1}z}+\sigma_{1}\sigma_{2}e^{\sigma_{2}z}]}{\Delta}\\
+R(\alpha,z)  &  =\frac{2i\mu\alpha^{2}\sigma_{1}[-(\alpha^{2}-0.5\varkappa
+_{2}^{2})e^{\sigma_{1}z}+\alpha^{2}e^{\sigma_{2}z}]}{\Delta}\\
+M(\alpha,z)  &  =\frac{2\mu\sigma_{2}[-\alpha^{2}e^{\sigma_{1}z}+(\alpha
+^{2}-0.5\varkappa_{2}^{2})e^{\sigma_{2}z}]}{\Delta}\\
+S(\alpha,z)  &  =\frac{2\mu\alpha^{2}[-\sigma_{1}\sigma_{2}e^{\sigma_{1}%
+z}+(\alpha^{2}-0.5\varkappa_{2}^{2})e^{\sigma_{2}z}]}{\Delta}%
+\end{align*}
+%
+
+\[
+N(\alpha,z)=\frac{i}{\mu\alpha^{2}\sigma_{2}}e^{\sigma_{2}z}%
+\]
+
+
+Составим из
+полученных
+функций
+матрицу Грина:%
+
+\[
+K=\left(
+\begin{array}
+[c]{c}%
+-i(\alpha_{1}^{2}M+\alpha_{2}^{2}N)~-i\alpha_{1}\alpha_{2}(M+N)~-i\alpha
+_{1}P\\
+-i\alpha_{1}\alpha_{2}(M-N)~-i(\alpha_{2}^{2}M+\alpha_{1}^{2}N)~-i\alpha
+_{2}P\\
+\alpha_{1}S~\alpha_{2}S~R
+\end{array}
+\right)  .
+\]
+
+
+Тогда вектор
+перемещений
+можно
+получить
+путем
+обратного
+преобразования
+Фурье:%
+
+\[
+\mathbf{u}(x,y,z)=\frac{1}{2\pi}\iint\limits_{\Gamma_{1}\Gamma_{2}}%
+K(\alpha_{1},\alpha_{2},z)\mathbf{Q}(\alpha_{1},\alpha_{2})e^{-i(\alpha
+_{1}x+\alpha_{2}y)}d\alpha_{1}d\alpha_{2}%
+\]
+
+
+Для плоского
+случая
+положим $\alpha=\alpha_{1}%
+,\alpha_{2}=0,$ в
+качестве $K$
+возьмем:
+\[
+K=\left(
+\begin{array}
+[c]{c}%
+-i\alpha^{2}M~~-i\alpha P\\
+\alpha S~~~~R
+\end{array}
+\right)  .
+\]
+%
+
+\[
+\mathbf{u}(x,y)=\frac{1}{2\pi}\int\limits_{\Gamma}K(\alpha,z)\mathbf{Q}%
+(\alpha)e^{-i\alpha x}d\alpha
+\]
+
+
+
+
+Как и в
+предыдущем
+пункте
+построим
+горизонтальную
+компоненту $u$
+поля $\mathbf{u}=(u,v)$ на
+поверхности
+волновода.
+Для той же
+нагрузки,
+сосредоточенной
+в начале
+преобразование
+Фурье будет
+иметь вид $\mathbf{Q}%
+(\alpha)=(0,1)$.
+Параметры
+материала -- прежние:
+
+\begin{center}%
+\begin{tabular}
+[c]{|l|l|l|l|}\hline
+$\mu$ & $\lambda$ & $\rho$ & $f$\\\hline
+22.6 ГПа & 18 ГПа & 2700
+кг/м$^{3}$ & 200 кГц\\\hline
+\end{tabular}
+
+
+
+\end{center}
+
+Для
+сравнения
+результатов
+вычислений
+далее
+приведены
+графики,
+построенные
+на основе
+вычислений COMSOL
+Multiphysics и
+программы на
+языке Fortran,
+использующей
+формулы,
+полученные
+полуаналитическим
+методом.
+Сначала
+сравним
+графики
+относительно
+компоненты u:
+
+\newpage\begin{figure}[ptb]
+\centering
+\includegraphics[scale=0.45]{Matlab_images/CompareU.eps}\caption{Сравнение
+результатов
+COMSOL и Fortran по
+компоненте u}%
+\label{comsol21}%
+\end{figure}
+
+Теперь
+графики
+относительно
+компоненты v:
+
+\begin{figure}[ptb]
+\centering
+\includegraphics[scale=0.45]{Matlab_images/CompareV.eps}\caption{Сравнение
+результатов
+COMSOL и Fortran по
+компоненте v}%
+\label{comsol22}%
+\end{figure}
+
+\newpage\addcontentsline{toc}{section}{Список использованных источников}
+
+\begin{thebibliography}{9}                                                                                                %
+
+
+\bibitem {Shefs}Глушков
+Е.В., Глушкова
+Н.В.
+Интегральные
+преобразования
+в задачах
+теории
+упругости, 1990
+
+\bibitem {Mitra}Mitra M., Gopalakrishnan S. Guided Wave Based Structural
+Health Monitoring: Review. Smart Materials and Structures, 2016, vol. 25, no.
+5, pp. 1--27. DOI: 10.1088/0964- 1726/25/5/053001
+\end{thebibliography}
+
+
+\end{document}
